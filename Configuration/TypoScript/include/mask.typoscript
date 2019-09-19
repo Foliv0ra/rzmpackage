@@ -1,0 +1,2 @@
+lib.contentBanner < styles.content.get
+lib.contentBanner.select.where = colPos=2

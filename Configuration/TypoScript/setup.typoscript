@@ -1,0 +1,105 @@
+//Import Fluid-Styled-Content and all files of the TypoScript Folder "include"
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:site_rzm/Configuration/TypoScript/include/" extensions="typoscript">
+
+// Start Page-Config
+page = PAGE
+page {   
+   typeNum = 0
+
+   // CSS & JAVASCRIPT
+   includeCSS {
+      website = EXT:site_rzm/Resources/Public/Css/website.css
+      cookieconsent = EXT:site_rzm/Resources/Public/Css/cookieconsent.min.css
+   }
+   includeJSFooter {     
+      lazyload = EXT:site_rzm/Resources/Public/JavaScript/lazysizes.min.js
+      cookieconsent = EXT:site_rzm/Resources/Public/JavaScript/cookieconsent.min.js
+      website = EXT:site_rzm/Resources/Public/JavaScript/custom.js
+   }
+
+   // FLUID TEMPLATE AND BACKENDLAYOUTS
+   10 = FLUIDTEMPLATE
+   10 {
+      templateRootPaths {
+         10 = EXT:site_rzm/Resources/Private/Templates/Page/        
+      }
+      partialRootPaths {
+         10 = EXT:site_rzm/Resources/Private/Partials/Page/         
+      }
+      layoutRootPaths {
+        10 = EXT:site_rzm/Resources/Private/Layouts/Page/  
+      }
+      
+      templateName.stdWrap.cObject = CASE
+      templateName.stdWrap.cObject {
+         key.data = pagelayout
+
+         # Layout Zuweisung
+         # Wird verwendet wenn keine spezielles Backend Layout definiert wurde.
+         default = TEXT
+         default.value = Default
+         
+         # Definition Layout Home
+         pagets__home = TEXT
+         pagets__home.value = Home         
+
+         # Definition für Subpages
+         pagets__subpages = TEXT
+         pagets__subpages.value = Subpages
+        }      
+   }
+
+
+   // Global site configuration
+   config {
+      absRefPrefix = auto
+      cache_period = 86400
+      debug = 1
+      disablePrefixComment = 1
+      doctype = html5
+      extTarget = 
+      index_enable = 1
+      index_externals = 1
+      index_metatags = 1
+      inlineStyle2TempFile = 1
+      intTarget =
+      linkVars = L
+      metaCharset = utf-8
+      no_cache = 1
+      pageTitleFirst = 1
+      prefixLocalAnchors = all
+      removeDefaultJS = 0
+      renderCharset = utf-8
+      sendCacheHeaders = 1
+      uniqueLinkVars = 1
+
+      // Disable image upscaling
+      noScaleUp = 1
+
+      // Compression and concatenation of CSS and JS Files
+      compressCss = 0
+      compressJs = 0
+      concatenateCss = 0
+      concatenateJs = 0
+   }
+
+   // Header Data
+
+   headerData {
+      10 = TEXT
+      10.value(
+<meta name = "viewport" content = "user-scalable=no, initial-scale=1.0, width=device-width" >
+<meta name = "format-detection" content = "telephone=no" >
+<meta name = "theme-color" content = "#ffffff" >
+<link rel = "apple-touch-icon" sizes = "180x180" href = "/fileadmin/templates/images/apple-touch-icon.png" >
+<link rel = "icon" type = "image/png" href = "/fileadmin/templates/images/favicon-32x32.png" sizes = "32x32" >
+<link rel = "shortcut icon" href = "/fileadmin/templates/images/favicon.ico" >
+<meta name = "msapplication-config" content = "/fileadmin/templates/images/browserconfig.xml" >
+      )
+   }
+}
+// End of PAGE
+  page.bodyTag >
+  page.bodyTagCObject = TEXT
+  page.bodyTagCObject.dataWrap = <body id="id-{TSFE:id}">

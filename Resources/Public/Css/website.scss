@@ -1,0 +1,271 @@
+/// Imports 
+
+/// TODO: Add your variables here 
+@import 'helpers/variables';
+
+/// CSS Reset 4.0
+@import 'helpers/resetAll';
+
+/// TODO: Add your font here
+/// FIXME: This file contains a @import Google Webfont!
+@import 'helpers/fontset';
+
+/// Bourbon SCSS Library 
+/// Version: 5.1.0
+/// SEE: https://www.bourbon.io/docs/5.1.0/
+@import 'helpers/bourbon';
+
+/// TODO: Add your functions here
+@import 'helpers/functions';
+
+/// TODO: Add your extends here
+@import 'helpers/extends';
+
+/// Typo3 Styled Content - FLEX
+@import 'helpers/typo3StyledContent';
+
+/// TODO: Add or adjust your breakpoints
+$mq-breakpoints: (mobile: 320px,
+tablet: 740px,
+desktop: 980px,
+wide: 1200px);
+
+
+/// Breakpoint Helper
+/// Uncomment to show the current breakpoint in the top left of the website 
+$mq-show-breakpoints: (mobile, tablet, desktop, wide);
+
+@import 'helpers/mq';
+
+// General HTML Styles 
+
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font: 400 1em/1.2 'SourceSans', sans-serif, arial;
+    -webkit-text-size-adjust: none;
+    color: #333;
+    background-color: #fff;
+}
+
+img,
+video {
+    border: none;
+    max-width: 100%;
+    height: auto;
+}
+
+.row {
+    width: 100%;
+    max-width: 1032px;
+    @include push--auto;
+    padding: 0 $basePadding;
+}
+
+.flexwrap-space_between {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#navigation ul,
+#footer ul,
+#content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+// SVG Sprite
+
+.lang-switch {
+    background-image: url('/fileadmin/templates/images/sprite.svg');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+// Sticky Footer Flex 
+#outer-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .content {
+        flex: 1;
+    }
+}
+
+// Header 
+
+#banner {
+    padding-top: 39%;
+    margin-bottom: 2rem;
+    background-color: #fff;
+
+    #banner-image {
+        left: 0;
+        top: 0;
+        width: 100%;
+        position: absolute;
+        opacity: 0.69;
+
+        figure {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    nav {
+        margin-bottom: 1rem;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 516px);
+
+        #mainnav {
+            padding: 1rem 0;
+
+            li {        
+                a {
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-size: 1.125em;
+                    color: $primaryColor;
+                    position: relative;
+                    letter-spacing: 1px;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: calc(100% + 0.075rem);
+                        border-bottom: 0.375rem solid $secondaryColor;
+                        left: 50%;
+                        right: 50%;
+                        transition: all 0.3s ease;
+                    }
+
+                    &:hover:after {
+                        left: 0;
+                        right: 0;
+                        transition: all 0.3s ease;
+                    }
+                }
+                &.act a:after{
+                    left: 0;
+                    right: 0;                    
+                }
+            }
+        }
+
+        // Touch-Trigger Icon (For MMENU - Active on body class mm-opened)
+        #touch-trigger {
+            width: 50px;
+            height: 37px;
+            position: absolute;
+            right: 0;
+            top: 3.4em;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .5s ease-in-out;
+            transition: .5s ease-in-out;
+            cursor: pointer;
+            display: none;
+            z-index: 90;
+
+            a {
+                display: block;
+                height: 100%;
+
+                span {
+                    display: block;
+                    position: absolute;
+                    height: 6px;
+                    width: 100%;
+                    background-color: #000;
+                    border-radius: 9px;
+                    opacity: 1;
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+                    left: 0;
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                    -webkit-transition: .25s ease-in-out;
+                    transition: .25s ease-in-out;
+
+                    &:nth-child(1) {
+                        top: 0px;
+                        -webkit-transform-origin: left center;
+                        transform-origin: left center;
+                    }
+
+                    &:nth-child(2) {
+                        top: 13px;
+                        -webkit-transform-origin: left center;
+                        transform-origin: left center;
+                    }
+
+                    &:nth-child(3) {
+                        top: 26px;
+                        -webkit-transform-origin: left center;
+                        transform-origin: left center;
+                    }
+                }
+            }
+        }
+
+        .mm-opened {
+            #touch-trigger {
+                span {
+                    &:nth-child(1) {
+                        -webkit-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                        top: -3px;
+                        left: 8px;
+                    }
+
+                    &:nth-child(2) {
+                        width: 0%;
+                        opacity: 0;
+                        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                    }
+
+                    &:nth-child(3) {
+                        -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                        top: 33px;
+                        left: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// Main & Content
+
+main {}
+
+
+// Footer 
+
+footer {
+    background-color: $primaryColor
+}

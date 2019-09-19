@@ -1,0 +1,11 @@
+<div class="footer-wrap row">
+	<p>Hier der Footer Text</p>
+	<f:if condition="{menuFooter}">
+		<ul id="footer-menu" class="menu">
+			<f:for each="{menuFooter}" as="mainItem">
+				<f:render partial="Navigation/Elements/Item" arguments="{item: mainItem}" />
+				</li>
+			</f:for>
+		</ul>
+	</f:if>
+</div>

@@ -1,0 +1,16 @@
+<f:spaceless>
+    <div id="outer-wrap">
+        <nav class="row">
+            <f:format.raw>{logo}</f:format.raw>
+            <f:render partial="Navigation/Main" arguments="{menuMain: menuMain}" />
+        </nav>
+        <main role="main">
+            <div class="row">                   
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+            </div>
+        </main>
+        <footer>
+            <f:render partial="Navigation/Footer" arguments="{menuFooter: menuFooter}" />
+        </footer>
+    </div>
+</f:spaceless>

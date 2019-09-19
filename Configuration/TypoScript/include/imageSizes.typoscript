@@ -1,0 +1,40 @@
+// IMAGESETTING
+
+lib.contentElement {
+    settings {
+        media {
+            brakpoints {
+                // MIN-WIDTH
+                wide = 1200            
+                desktop = 980
+                tablet = 740
+                phablet = 520 
+                //mobile = 520                
+            }
+            ri {
+                 // Colpos 1
+                 1 {
+                    placeholder.default = /typo3conf/ext/site_rzm/Resources/Public/Images/loader-landscape.gif
+                    res.retina = 3000
+                    res.wide = 1500
+                    res.desktop = 1300
+                    res.tablet = 1000
+                    res.phablet = 800
+                    res.mobile = 500
+                  
+ 
+                 }
+                 // Colpos 2
+                 2 {
+                    placeholder.default = /typo3conf/ext/site_rzm/Resources/Public/Images/loader-landscape.gif
+                    res.retina = 3000
+                    res.wide = 1500
+                    res.desktop = 1300
+                    res.tablet = 1000
+                    res.phablet = 800
+                    res.mobile = 500          
+                }
+            }
+        }
+    }
+}

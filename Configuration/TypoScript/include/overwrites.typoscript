@@ -1,0 +1,11 @@
+lib.contentElement {
+   templateRootPaths {
+      200 = EXT:site_rzm/Resources/Private/Templates/StyledContent/
+   }
+   partialRootPaths {
+      200 = EXT:site_rzm/Resources/Private/Partials/StyledContent/
+   }
+   layoutRootPaths {
+      200 = EXT:site_rzm/Resources/Private/Layouts/StyledContent/
+   }
+}

@@ -1,0 +1,6 @@
+// VARIABLES
+page.10.variables {
+   logo = TEXT
+   logo.value = {$logo}
+   footer < lib.footer
+}

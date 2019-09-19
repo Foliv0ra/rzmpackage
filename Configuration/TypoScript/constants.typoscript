@@ -1,0 +1,16 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.txt">
+
+
+// Template path
+
+page {
+   fluidtemplate {
+      layoutRootPath = EXT:site_rzm/Resources/Private/Layouts/Page/
+      partialRootPath = EXT:site_rzm/Resources/Private/Partials/Page/
+      templateRootPath = EXT:site_rzm/Resources/Private/Templates/Page/
+   }
+}
+
+
+// PAGE CONSTANTS
+logo = <a href="/" title="Zurück zur Startseite von RaumZeitMedia">LOGO</a>

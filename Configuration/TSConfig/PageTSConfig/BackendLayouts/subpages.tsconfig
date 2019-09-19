@@ -1,0 +1,29 @@
+mod.web_layout.BackendLayouts {
+  subpages {
+    title = LLL:EXT:site_rzm/Resources/Private/Language/locallang.xlf:backendLayout.subpages
+    config {
+      backend_layout {
+        colCount = 1
+        rowCount = 2
+        rows {
+          1 {
+            columns {
+              1 {
+                name = Banner
+                colPos = 2
+              }
+            }
+          }
+          2 {
+            columns {
+              1 {
+                name = Inhalt
+                colPos = 1
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

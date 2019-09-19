@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:for each="{settings.media.ri}" as="Ri" key="keyR">
+    <f:if condition="{keyR} == {colPos}">
+        <picture>
+            <source data-srcset="{f:uri.image(image: file, maxWidth: settings.maxImgWidth, cropVariant: 'default')}" media="(min-width: {settings.media.brakpoints.wide}px)">
+            <source data-srcset="{f:uri.image(image: file, maxWidth: Ri.res.desktop, cropVariant: 'default')}, {f:uri.image(image: file, maxWidth: Ri.res.retina, cropVariant: 'default')} 2x" media="(min-width: {settings.media.brakpoints.desktop}px)">
+            <source data-srcset="{f:uri.image(image: file, maxWidth: Ri.res.tablet, cropVariant: 'tablet')}" media="(min-width: {settings.media.brakpoints.tablet}px)">
+            <source data-srcset="{f:uri.image(image: file, maxWidth: Ri.res.phablet, cropVariant: 'mobile')}" media="(min-width: {settings.media.brakpoints.phablet}px)">
+            <source data-srcset="{f:uri.image(image: file, maxWidth: Ri.res.mobile, cropVariant: 'mobile')}" media="(min-width: 0px)">
+            <!---Fallback--->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{f:uri.image(image: file, maxWidth: settings.maxImgWidth, cropVariant: 'default')}"
+                alt="{file.alternative}" longdesc="{file.description}" title="{file.title}">
+        </picture>
+    </f:if>
+</f:for>
+
+</html>
