@@ -1,56 +1,10 @@
-/* Source Sans Pro - Light */
-@font-face {
-  font-family: 'SourceSans';
-  font-style: normal;
-  font-weight: 300;
-  src: url('/fileadmin/templates/fonts/sourcesanspro-light-webfont.eot');
-  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'),
-       url('/fileadmin/templates/fonts/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/fileadmin/templates/fonts/sourcesanspro-light-webfont.woff2') format('woff2'),
-       url('/fileadmin/templates/fonts/sourcesanspro-light-webfont.woff') format('woff'),
-       url('/fileadmin/templates/fonts/sourcesanspro-light-webfont.ttf') format('truetype'),
-       url('/fileadmin/templates/fonts/sourcesanspro-light-webfont.svg#SourceSans') format('svg'); 
-}
+@import './functions';
 
-/* Source Sans Pro - regular */
-@font-face {
-  font-family: 'SourceSans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fileadmin/templates/fonts/sourcesanspro-regular-webfont.eot'); /* IE9 Compat Modes */
-  src: local('Source Sans Pro Regular'), local('SourceSansPro-regular'),
-       url('/fileadmin/templates/fonts/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fileadmin/templates/fonts/sourcesanspro-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fileadmin/templates/fonts/sourcesanspro-regular-webfont.woff') format('woff'), /* Modern Browsers */
-       url('/fileadmin/templates/fonts/sourcesanspro-regular-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fileadmin/templates/fonts/sourcesanspro-regular-webfont.svg#SourceSans') format('svg'); /* Legacy iOS */
-}
+/// Ein font-face mit Roboto Regular erstellen:
+/// Für Konfiguration siehe _functions.scss -> @mixin font-face
+/// @include font-face(Roboto-Regular, fonts/Roboto, $weight: 400);
 
-/* Source Sans Pro - regular-italic */
-@font-face {
-  font-family: 'SourceSans';
-  font-style: italic;
-  font-weight: 400;
-  src: url('/fileadmin/templates/fonts/sourcesanspro-italic-webfont.eot'); /* IE9 Compat Modes */
-  src: local('Source Sans Pro Regular'), local('SourceSansPro-regular'),
-       url('/fileadmin/templates/fonts/sourcesanspro-italic-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fileadmin/templates/fonts/sourcesanspro-italic-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fileadmin/templates/fonts/sourcesanspro-italic-webfont.woff') format('woff'), /* Modern Browsers */
-       url('/fileadmin/templates/fonts/sourcesanspro-italic-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fileadmin/templates/fonts/sourcesanspro-italic-webfont.svg#SourceSans') format('svg'); /* Legacy iOS */
+html,
+body {
+  font-family: 'Roboto', sans-serif;
 }
-
-/* Source Sans Pro - Bold */
-@font-face {
-  font-family: 'SourceSans';
-  font-style: normal;
-  font-weight: 700;
-  src: url('/fileadmin/templates/fonts/sourcesanspro-bold-webfont.eot'); /* IE9 Compat Modes */
-  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
-       url('/fileadmin/templates/fonts/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fileadmin/templates/fonts/sourcesanspro-bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fileadmin/templates/fonts/sourcesanspro-bold-webfont.woff') format('woff'), /* Modern Browsers */
-       url('/fileadmin/templates/fonts/sourcesanspro-bold-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fileadmin/templates/fonts/sourcesanspro-bold-webfont.svg#SourceSans') format('svg'); /* Legacy iOS */
-}
-
