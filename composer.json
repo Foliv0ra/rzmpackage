@@ -1,0 +1,32 @@
+{
+    "name": "rzm/rzmpackage",
+    "type": "typo3-cms-extension",
+    "description": "Sitepackage from RaumZeitMedia",
+    "homepage": "https://www.raumzeitmedia.de",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Christian Rupp",
+            "role": "Developer",
+            "email": "rupp.dev@gmail.com"
+        }
+    ],
+    "keywords": [
+      "TYPO3 CMS",
+      "RZM",
+      "sitepackage",
+      "fluid",
+      "menu processor"
+    ],
+    "version": "1.0.0",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        }
+    ],
+    "require": {
+        "typo3/minimal": "^9.5",
+        "content_defender": "^3.0"
+    }
+}
