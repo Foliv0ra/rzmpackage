@@ -27,6 +27,12 @@
     ],
     "require": {
         "typo3/minimal": "^9.5",
-        "content_defender": "^3.0"
+        "ichhabrecht/content-defender": "^3.0",
+        "typo3-ter/mask": "^4.1.1"
+    },    
+    "autoload": {
+        "psr-4": {
+            "Rzm\\Rzmpackage\\": "Classes/"
+        }
     }
 }
