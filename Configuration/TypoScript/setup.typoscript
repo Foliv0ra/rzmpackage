@@ -1,6 +1,6 @@
 //Import Fluid-Styled-Content and all files of the TypoScript Folder "include"
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:site_rzm/Configuration/TypoScript/include/" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:rzmpackage/Configuration/TypoScript/include/" extensions="typoscript">
 
 // Start Page-Config
 page = PAGE
@@ -9,26 +9,26 @@ page {
 
    // CSS & JAVASCRIPT
    includeCSS {
-      website = EXT:site_rzm/Resources/Public/Css/website.css
-      cookieconsent = EXT:site_rzm/Resources/Public/Css/cookieconsent.min.css
+      website = EXT:rzmpackage/Resources/Public/Css/website.css
+      cookieconsent = EXT:rzmpackage/Resources/Public/Css/others/cookieconsent.min.css
    }
    includeJSFooter {     
-      lazyload = EXT:site_rzm/Resources/Public/JavaScript/lazysizes.min.js
-      cookieconsent = EXT:site_rzm/Resources/Public/JavaScript/cookieconsent.min.js
-      website = EXT:site_rzm/Resources/Public/JavaScript/custom.js
+      lazyload = EXT:rzmpackage/Resources/Public/JavaScript/lazysizes.min.js
+      cookieconsent = EXT:rzmpackage/Resources/Public/JavaScript/cookieconsent.min.js
+      website = EXT:rzmpackage/Resources/Public/JavaScript/custom.js
    }
 
    // FLUID TEMPLATE AND BACKENDLAYOUTS
    10 = FLUIDTEMPLATE
    10 {
       templateRootPaths {
-         10 = EXT:site_rzm/Resources/Private/Templates/Page/        
+         10 = EXT:rzmpackage/Resources/Private/Templates/Page/        
       }
       partialRootPaths {
-         10 = EXT:site_rzm/Resources/Private/Partials/Page/         
+         10 = EXT:rzmpackage/Resources/Private/Partials/Page/         
       }
       layoutRootPaths {
-        10 = EXT:site_rzm/Resources/Private/Layouts/Page/  
+        10 = EXT:rzmpackage/Resources/Private/Layouts/Page/  
       }
       
       templateName.stdWrap.cObject = CASE

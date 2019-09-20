@@ -1,6 +1,6 @@
 mod.web_layout.BackendLayouts {
   home {
-    title = LLL:EXT:site_rzm/Resources/Private/Language/locallang.xlf:backendLayout.home
+    title = LLL:EXT:rzmpackage/Resources/Private/Language/locallang.xlf:backendLayout.home
     config {
       backend_layout {
         colCount = 1

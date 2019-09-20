@@ -1,6 +1,6 @@
 mod.web_layout.BackendLayouts {
   subpages {
-    title = LLL:EXT:site_rzm/Resources/Private/Language/locallang.xlf:backendLayout.subpages
+    title = LLL:EXT:rzmpackage/Resources/Private/Language/locallang.xlf:backendLayout.subpages
     config {
       backend_layout {
         colCount = 1

@@ -5,12 +5,12 @@
 
 page {
    fluidtemplate {
-      layoutRootPath = EXT:site_rzm/Resources/Private/Layouts/Page/
-      partialRootPath = EXT:site_rzm/Resources/Private/Partials/Page/
-      templateRootPath = EXT:site_rzm/Resources/Private/Templates/Page/
+      layoutRootPath = EXT:rzmpackage/Resources/Private/Layouts/Page/
+      partialRootPath = EXT:rzmpackage/Resources/Private/Partials/Page/
+      templateRootPath = EXT:rzmpackage/Resources/Private/Templates/Page/
    }
 }
 
 
 // PAGE CONSTANTS
-logo = <a href="/" title="Zurück zur Startseite von RaumZeitMedia">LOGO</a>
+logo = <a href="/" title="Zurück zur Startseite">LOGO</a>
