@@ -18,7 +18,7 @@
       "fluid",
       "menu processor"
     ],
-    "version": "1.0.0",
+    "version": "1.1.0",
     "repositories": [
         {
             "type": "composer",
@@ -26,9 +26,9 @@
         }
     ],
     "require": {
-        "typo3/minimal": "^9.5",
-        "ichhabrecht/content-defender": "^3.0",
-        "typo3-ter/mask": "^4.1.1"
+        "typo3/minimal": "^10.4",
+        "ichhabrecht/content-defender": "^3.2",
+        "typo3-ter/mask": "^7.0.28"
     },    
     "autoload": {
         "psr-4": {
