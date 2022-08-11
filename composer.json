@@ -1,35 +1,31 @@
 {
     "name": "rzm/rzmpackage",
     "type": "typo3-cms-extension",
-    "description": "Sitepackage from RaumZeitMedia",
+    "description": "Sitepackage from RaumZeitMedia for Typo3 v10",
     "homepage": "https://www.raumzeitmedia.de",
     "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "Christian Rupp",
-            "role": "Developer",
-            "email": "rupp.dev@gmail.com"
-        }
-    ],
+    "authors": [{
+        "name": "Christian Rupp",
+        "role": "Developer",
+        "email": "rupp.dev@gmail.com"
+    }],
     "keywords": [
-      "TYPO3 CMS",
-      "RZM",
-      "sitepackage",
-      "fluid",
-      "menu processor"
+        "TYPO3 CMS",
+        "RZM",
+        "sitepackage",
+        "fluid",
+        "menu processor"
     ],
     "version": "1.1.0",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://composer.typo3.org/"
-        }
-    ],
+    "repositories": [{
+        "type": "composer",
+        "url": "https://composer.typo3.org/"
+    }],
     "require": {
         "typo3/minimal": "^10.4",
         "ichhabrecht/content-defender": "^3.2",
         "typo3-ter/mask": "^7.0.28"
-    },    
+    },
     "autoload": {
         "psr-4": {
             "Rzm\\Rzmpackage\\": "Classes/"
