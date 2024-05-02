@@ -8,7 +8,7 @@
         {
             "name": "Christian Rupp",
             "role": "Developer",
-            "email": "rupp.dev@gmail.com"
+            "email": "cr@planb-bremen.de"
         }
     ],
     "keywords": [
@@ -26,9 +26,9 @@
         }
     ],
     "require": {
-        "typo3/minimal": "^10.4",
-        "ichhabrecht/content-defender": "^3.2",
-        "typo3-ter/mask": "^7.0.28"
+        "typo3/minimal": "^12.0",
+        "ichhabrecht/content-defender": "^3.4",
+        "typo3-ter/mask": "^8.3.10"
     },    
     "autoload": {
         "psr-4": {
