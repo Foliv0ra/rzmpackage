@@ -12,24 +12,23 @@
         }
     ],
     "keywords": [
-      "TYPO3 CMS",
-      "RZM",
-      "sitepackage",
-      "fluid",
-      "menu processor"
+        "TYPO3 CMS",
+        "RZM",
+        "sitepackage",
+        "fluid",
+        "menu processor"
     ],
     "version": "1.1.0",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://composer.typo3.org/"
-        }
-    ],
+    "repositories": [{
+        "type": "composer",
+        "url": "https://composer.typo3.org/"
+    }],
     "require": {
         "typo3/minimal": "^12.0",
         "ichhabrecht/content-defender": "^3.4",
         "typo3-ter/mask": "^8.3.10"
     },    
+
     "autoload": {
         "psr-4": {
             "Rzm\\Rzmpackage\\": "Classes/"
